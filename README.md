@@ -20,10 +20,18 @@ To prepare the data for modeling, we employ a series of data transformation step
 
 - **One-Hot Encoding**: Categorical features are further processed using one-hot encoding (`OneHotEncoder`) to convert them into a binary format.
 
+### Feature Selection
+
+- **Focused Feature Selection**: We carefully selected relevant features for prediction while excluding less influential ones. This reduced the dimensionality of the dataset and improved model efficiency.
+
+To address class imbalance, we utilize the `RandomOverSampler` from the `imblearn` library to balance the distribution of the target variable.
+
 ### Model Ensemble and Resampling
 
 To build a robust predictive model, we employ a diverse set of classification algorithms, including Random Forest, Gradient Boosting, AdaBoost, Bagging, Support Vector Machine (SVM), Decision Tree, and XGBoost. These models are combined into a powerful ensemble using the `VotingClassifier`.
 
-To address class imbalance, we utilize the `RandomOverSampler` from the `imblearn` library to balance the distribution of the target variable.
+## Efficient Optimization for Runtime and Accuracy
+
+One of the key achievements of this project is the optimization of code to achieve impressive results within a short runtime. Here's how we optimized the code for efficiency while maintaining a high accuracy rate of 80%:
 
 This project aims to showcase how a combination of transformers and ensemble methods can be applied to real-world datasets for accurate predictions and insights.
